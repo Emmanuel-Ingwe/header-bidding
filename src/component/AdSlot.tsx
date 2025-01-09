@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from 'react';
 import { useLazyLoad } from '@/src/hooks/useLazyLoad';
 import { validateBid } from '@/src/utils/bidValidation';

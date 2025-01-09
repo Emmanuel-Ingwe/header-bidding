@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState, RefObject } from 'react';
 
 export const useLazyLoad = (ref: RefObject<HTMLElement | null>) => {
