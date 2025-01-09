@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Link the Prebid.js script */}
-        <script src="/prebid.js" async></script>
+        <script src="/js/prebid.js" async></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
