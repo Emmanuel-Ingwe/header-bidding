@@ -1,3 +1,4 @@
+
 export const adUnits = [
   {
     code: 'ad-slot-1',
@@ -46,5 +47,13 @@ export const configurePrebid = () => {
 
     // Register ad units
     window.pbjs.addAdUnits(adUnits);
+
+    // Optionally preload bids
+    window.pbjs.requestBids({
+      bidsBackHandler: (bidResponses) => {
+        console.log('Bids are back!', bidResponses);
+        // Send bids to ad server (if using GPT or other)
+      },
+    });
   });
 };

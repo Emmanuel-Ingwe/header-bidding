@@ -10,17 +10,6 @@ type AdSlotProps = {
   fallbackHtml: string;
 };
 
-declare global {
-  interface Window {
-    pbjs: {
-      que: any[];
-      addAdUnits: (adUnits: any[]) => void;
-      setConfig: (priceGranularity: any[]) => void;
-      requestBids: (options: { bidsBackHandler: (bidResponses: any) => void }) => void;
-    };
-  }
-}
-
 const AdSlot: React.FC<AdSlotProps> = ({ id, sizes, fallbackHtml }) => {
   const adRef = useRef<HTMLDivElement>(null);
   const { isInView } = useLazyLoad(adRef); // Hook to check if the ad slot is in the viewport

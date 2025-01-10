@@ -15,8 +15,7 @@ export const useLazyLoad = (ref: RefObject<HTMLElement | null>) => {
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.1 } // Adjust threshold as needed
-    );
+      { threshold: 0.1 }     );
 
     observer.observe(ref.current);
 

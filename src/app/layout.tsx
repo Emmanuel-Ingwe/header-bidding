@@ -26,7 +26,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Link the Prebid.js script */}
         <script src="/js/prebid.js" async></script>
       </head>
       <body
