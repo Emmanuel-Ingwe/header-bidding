@@ -38,7 +38,13 @@ declare namespace Prebid {
   
   declare global {
     interface Window {
-      pbjs: Prebid.Pbjs;
+      pbjs: {
+        que: any[];
+        setConfig: (config: any) => void;
+        addAdUnits: (adUnits: any[]) => void;
+        requestBids: (options: { bidsBackHandler: () => void }) => void;
+      };
     }
   }
   
+  export {};

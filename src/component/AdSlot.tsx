@@ -15,6 +15,7 @@ declare global {
     pbjs: {
       que: any[];
       addAdUnits: (adUnits: any[]) => void;
+      setConfig: (priceGranularity: any[]) => void;
       requestBids: (options: { bidsBackHandler: (bidResponses: any) => void }) => void;
     };
   }
@@ -40,7 +41,7 @@ const AdSlot: React.FC<AdSlotProps> = ({ id, sizes, fallbackHtml }) => {
           code: id,
           mediaTypes: { banner: { sizes } },
           bids: [
-            { bidder: 'appnexus', params: { placementId: '12345' } },
+            { bidder: 'appnexus', params: { placementId: '12345', keywords: ['technology', 'sports'] }},
             { bidder: 'rubicon', params: { accountId: '7890', siteId: '56789', zoneId: '123456' } },
           ],
         },
