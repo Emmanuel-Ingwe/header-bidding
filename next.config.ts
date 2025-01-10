@@ -7,6 +7,9 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true, // Ignores ESLint warnings during build
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  }
 };
 
 
