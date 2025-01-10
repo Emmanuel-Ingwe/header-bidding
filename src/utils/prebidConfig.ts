@@ -1,5 +1,3 @@
-// src/utils/prebidConfig.ts
-
 export const adUnits = [
   {
     code: 'ad-slot-1',
@@ -32,7 +30,7 @@ export const configurePrebid = () => {
   }
 
   window.pbjs.que.push(() => {
-    // Set global configuration
+    // Set global configuration (simplified and updated for latest Prebid.js versions)
     window.pbjs.setConfig({
       priceGranularity: 'high', // High granularity for bid CPM
       currency: { adServerCurrency: 'USD' }, // Default currency
@@ -48,13 +46,5 @@ export const configurePrebid = () => {
 
     // Register ad units
     window.pbjs.addAdUnits(adUnits);
-
-    // Optionally preload bids
-    window.pbjs.requestBids({
-      bidsBackHandler: () => {
-        console.log('Bids are back!');
-        // Send bids to ad server (if using GPT or other)
-      },
-    });
   });
 };
